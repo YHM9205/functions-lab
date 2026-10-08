@@ -60,8 +60,11 @@ Complete the exercise in the space below:
 
 
 const isCharAVowel = (char) => {
-  const vowels = ['a', 'e', 'i', 'o', 'u'];
-  return vowels.includes(char.toLowerCase());
+  if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+    return true;
+  } else {
+    return false;
+  }
 };
 console.log('Exercise 3 Result:', isCharAVowel('a'));
 
@@ -82,9 +85,8 @@ Complete the exercise in the space below:
 
 
 
-/* Exercise 4 */
 const generateEmail = (name, domain) => {
-  return `${name}@${domain}`;
+  return name + '@' + domain;
 };
 console.log('Exercise 4 Result:', generateEmail('johnsmith', 'example.com'));
 
@@ -103,9 +105,8 @@ Complete the exercise in the space below:
 
 
 
-/* Exercise 5 */
 const greetUser = (name, timeOfDay) => {
-  return `Good ${timeOfDay}, ${name}!`;
+  return 'Good ' + timeOfDay + ', ' + name + '!';
 };
 console.log('Exercise 5 Result:', greetUser('Sam', 'morning'));
 
@@ -123,9 +124,14 @@ Complete the exercise in the space below:
 
 
 
-/* Exercise 6 */
-const maxOfThree = (num1, num2, num3) => {
-  return Math.max(num1, num2, num3);
+const maxOfThree = (a, b, c) => {
+  if (a >= b && a >= c) {
+    return a;
+  } else if (b >= a && b >= c) {
+    return b;
+  } else {
+    return c;
+  }
 };
 console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
 
@@ -145,9 +151,8 @@ Complete the exercise in the space below:
 
 
 
-/* Exercise 7 */
-const calculateTip = (billAmount, tipPercentage) => {
-  return (billAmount * tipPercentage) / 100;
+const calculateTip = (bill, percentage) => {
+  return bill * percentage / 100;
 };
 console.log('Exercise 7 Result:', calculateTip(50, 20));
 
@@ -169,12 +174,11 @@ Complete the exercise in the space below:
 
 
 
-/* Exercise 8 */
 const convertTemperature = (temp, scale) => {
   if (scale === 'C') {
-    return (temp * 9/5) + 32;
-  } else if (scale === 'F') {
-    return (temp - 32) * 5/9;
+    return temp * 9 / 5 + 32;
+  } else {
+    return (temp - 32) * 5 / 9;
   }
 };
 console.log('Exercise 8 Result:', convertTemperature(32, 'C'));
