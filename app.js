@@ -1,4 +1,25 @@
 /*
+Exercise 1: maxOfTwoNumbers()
+
+In this exercise, create a function named maxOfTwoNumbers. 
+It should take two numbers as inputs and return the larger number. 
+If they're equal, return either one.
+
+Exercise 1 has been completed for you:
+*/
+
+const maxOfTwoNumbers = (x, y) => {
+  if (x >= y) {
+    return x;
+  } else {
+    return y;
+  }
+}
+
+console.log('Exercise 1 Result:', maxOfTwoNumbers(3, 9));
+
+
+/*
 Exercise 2: isAdult()
 
 Write a function named isAdult. It should take an age (number) 
@@ -19,26 +40,6 @@ const isAdult = (age) => {
   }
 }
 console.log('Exercise 2 Result:', isAdult(21));
-
-
-
-
-/*
-Exercise 3: isCharAVowel()
-
-Write a function named isCharAVowel that takes a single character as 
-an argument. It should return true if the character is a vowel and 
-false otherwise. For the purposes of this exercise, the character 
-y should not be considered a vowel.
-
-Example: isCharAVowel('a') should return true.
-
-Complete the exercise in the space below:
-*/
-
-
-
-
 
 
 
@@ -181,20 +182,6 @@ console.log('Exercise 8 Result:', convertTemperature(32, 'C'));
 
 
 
-/* Exercise 9 */
-const basicCalculator = (num1, num2, operation) => {
-  if (operation === 'add') {
-    return num1 + num2;
-  } else if (operation === 'subtract') {
-    return num1 - num2;
-  } else if (operation === 'multiply') {
-    return num1 * num2;
-  } else if (operation === 'divide') {
-    return num1 / num2;
-  }
-};
-console.log('Exercise 9 Result:', basicCalculator(10, 5, 'subtract'));
-
 /*
 Exercise 9: basicCalculator()
 
@@ -211,4 +198,16 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 Complete the exercise in the space below:
 */
 
+const basicCalculator = (num1, num2, operation) => {
+  if (operation === 'add') {
+    return num1 + num2;
+  } else if (operation === 'subtract') {
+    return num1 - num2;
+  } else if (operation === 'multiply') {
+    return num1 * num2;
+  } else if (operation === 'divide') {
+    return num1 / num2;
+  }
+};
+console.log('Exercise 9 Result:', basicCalculator(10, 5, 'subtract'));
 
